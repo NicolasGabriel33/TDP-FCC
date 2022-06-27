@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" display="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>DocRuby</title>
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>Introduction to Ruby</header>
+      <!- main menu here-->
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Ruby_Structure">Ruby Structure</a>
+      <a class="nav-link" href="#String">String</a>
+      <a class="nav-link" href="#Array">Array</a>
+      <a class="nav-link" href="#Hash">Hash</a>
+      <a class="nav-link" href="#Afterword">Afterword</a>
+    </nav>
+
+    <main id="main-doc">
+      
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Hello and welcome to this simple and very basic documentation to Ruby. All content here was taken from the original documentation from Standard Ruby 3.1.2 in <a href="https://ruby-doc.org/stdlib-3.1.2/"><span id="ref">Ruby.org</span></a>.</p>
+        <p>If this get your atention please take your time to see the original content since this was made only for study of HTML purposes.</p>
+        <p>If you're here is expected for you to have basic knowledge of programing and have Ruby installed on your machine. If you don't have one of those you can easily find one online.</p>
+        <p>Here you will see the following content:
+        <ul>
+          <li>Basic Ruby Structure</li>
+          <li>Basic String</li>
+          <li>Basic Array</li>
+          <li>Basic Hash</li>
+          <li>References</li>
+        </ul></p>
+      </section>
+
+      <section class="main-section" id="Ruby_Structure">
+        <header>Ruby Structure</header>
+        <p>In Ruby the syntax are usually as simple as it can get. Since is a Oriented Object Program (O.O.P.) most of the time you will work with blocks (the object) to simplify your code, meaning that if you have to use a big function or use line multiple times generally speaking you should simply make a new method so your main code will be clean and you'll still have easy access and a easy way to alterate that method any time you want.</p>
+        <p>Down here you'll find a simple code written in Ruby:</p>
+        <code>
+            puts "Hello World!"
+        </code>
+        <p>This is one of the simplest lines in ruby, this <code>puts</code> is the method that print something on the screen, while the <code>"Hello World!"</code> is what will be printed.</p>
+        <p>If you pay attention this is simply divided in two "blocks" being the first one the "puts" which calls a method and the second one the "'Hello World!'" the block which is needed for the method to work properly, since it would be unable to print anything if we didn't put something to be printed.</p>
+        <p>This is basically how Ruby works, a method and the blocks, or objects, needed for this method to work. Of course that there is more to it but this is but a scrach on Ruby.</p>
+      </section>
+
+      <section class="main-section" id="String">
+        <header>String</header>
+        <p>String is a class that is commonly used to work with letters, words or texts, but not only that it is also a class within Ruby which contains a lot of methods to work with this kind of object.</p>
+        
+        <p>A String is always in between quotation marks (<code>""</code>)this is basically what categorizes a String and while we won't see here any methods for string exactly I will show you how you would be able to declare a string into a variable.</p>
+        <code>code = "Ruby is the new code."</code>
+        <p>Here we declared a new variable, and with a method named <code><span id="class">.class</span></code> we can ask ruby from which class of object is this one that we declared.</p>
+        <p><code>code<span id="class">.class</span></code></p>
+        <p><code><span id="result">=>String</span></code></p>
+        
+      </section>
+
+      <section class="main-section" id="Array">
+        <header>Array</header>
+        <p>Array, as a class in ruby, is always defined by any content between square brackets ("<code>[]</code>"), this can also be the case for empty square brackets, in that case it would simply be an empty array.</p>
+        <p>An Array in ruby is treated as a list, where a character have an index and is separated by a comma ("<code>,</code>"); the index of the list is by default started on zero ("<code>0</code>") and is a integer number, there is a few ways to change that but this is not the focus here.</p>
+        <p>Here comes a exemple of a new array and an array with a few items.</p>
+        <p>Empty Array</p>
+        <p><code>example_array = Array<span id="method">.new</span></code></p>
+        <p><code>puts example_array</code></p>
+        <p><code><span id="result">=> []</span></code></p>
+
+        <p>Array with content</p>
+        <p><code>example_array = [1,2,3,4]</code></p>
+        <p><code>puts example_array</code></p>
+        <p><code><span id="result">=> [1,2,3,4]</span></code></p>
+        <p>With these examples we created a new array with the the <code>Array<span id="method">.new</span></code> but we can also create one by using the empty brackets or like we did on the second example the brackets with the content you want.</p>
+        <p>Also is worth noting that a element in a array can be anything, a letter, a number, a string, other array or a hash.</p>
+      </section>
+
+      <section class="main-section" id="Hash">
+        <header>Hash</header>
+        <p>Hash is another class in ruby with great usability, heavely used for its capacity of indexation since you can set a key for each value in the hash, meaning that you can basically set the index for each element.</p>
+        <p>Hash is identified by the braces ("<code>{}</code>") each element is separates by commas, like in the array, while element is a combination of a key and a value expressed by "<code>key : value</code>", there is other ways to present this combination, can be  like "<code>:key => value</code>" or you can use a string as a key like "<code>'key':value</code>" you can combine any of these syntaxes in the same hash.</p>
+        <p>You can create a hash in the same way you can create a Array.Here is some example of hashes:</p>
+        <p><code>hash_example = Hash<span id="method">.new</span></code></p>
+        <p><code>puts hash_example</code></p>
+        <p><code><span id="result">=> {}</span></code></p>
+        <p>A hash with the three types of syntaxes:
+        <p><code>hash_example = {key1 : 1, :key2 => 2, 'key3':3}</code></p>
+        <p><code>puts hash_example</code></p>
+        <p><code><span id="result">=> {key1 : 1, :key2 => 2, 'key3':3}</span></code></p>
+        <p>There is really no difference of which you use, it's up to you. While using a hash makes really easy to look up any value you want, if you know the key, you can also look up for the keys if you know the value. There is a lot of usages in a hash.</p>
+      </section>
+
+      <section class="main-section" id="Afterword">
+        <header>Afterword</header>
+        <p>All this content is a very basic concept of Ruby, there is a lot more of depht in it and you can see this and more in <a href="https://ruby-doc.org/stdlib-3.1.2/"><span id="ref">Ruby.org</span></a> and other Official Documentations, this was just a page created to work with HTML, so sorry for this 'extra-basic-content'(?) and thank you if you read any of it.</p>
+      </section>
+
+    </main>
+  </body>
+</html>
